@@ -1,9 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
+import Dashboard from "@/views/Dashboard.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/edit/:id",
+      path: "",
+      name: "home",
+      component: Dashboard,
+      meta: {
+        title: "Home",
+      },
+    },
+    {
+      path: "/books/edit/:id",
       name: "EditBook",
       component: () => import("@/views/EditBook.vue"),
       meta: {
@@ -11,7 +20,7 @@ const router = createRouter({
       },
     },
     {
-      path: "/new",
+      path: "/books/new",
       name: "CreateBook",
       component: () => import("@/views/NewBook.vue"),
       meta: {
@@ -19,9 +28,17 @@ const router = createRouter({
       },
     },
     {
-      path: "/delete/:id",
+      path: "/books/delete/:id",
       name: "DeleteBook",
       component: () => import("@/views/DeleteBook.vue"),
+      meta: {
+        title: "Create",
+      },
+    },
+    {
+      path: "/books/detail/:id",
+      name: "DeleteBook",
+      component: () => import("@/views/ShowBook.vue"),
       meta: {
         title: "Create",
       },
