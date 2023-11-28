@@ -63,7 +63,7 @@ onMounted(() => {
             </td>
             <td class="border border-slate-700 rounded-md text-center">
               <div class="flex justify-center gap-x-4">
-                <router-link :to="`/books/details/${book?._id}`">
+                <router-link :to="`/books/detail/${book?._id}`">
                   Details</router-link
                 >
                 <router-link :to="`/books/edit/${book?._id}`">
