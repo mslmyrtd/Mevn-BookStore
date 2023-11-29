@@ -32,15 +32,15 @@ const router = createRouter({
       name: "DeleteBook",
       component: () => import("@/views/DeleteBook.vue"),
       meta: {
-        title: "Create",
+        title: "Delete",
       },
     },
     {
       path: "/books/detail/:id",
-      name: "DeleteBook",
+      name: "DetailBook",
       component: () => import("@/views/ShowBook.vue"),
       meta: {
-        title: "Create",
+        title: "Detail",
       },
     },
     {
