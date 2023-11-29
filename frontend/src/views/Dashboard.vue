@@ -9,7 +9,6 @@ onMounted(() => {
   loading.value = true;
   axios("http://localhost:5000/books")
     .then((res) => {
-      console.log(res.data);
       books.value = res.data.data;
       loading.value = false;
     })
