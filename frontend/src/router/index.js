@@ -12,35 +12,35 @@ const router = createRouter({
       },
     },
     {
-      path: "/books/edit/:id",
-      name: "EditBook",
-      component: () => import("@/views/EditBook.vue"),
+      path: "/books",
+      name: "Books",
+      component: () => import("@/views/BooksView.vue"),
       meta: {
-        title: "EditPage",
+        title: "BooksPage",
       },
     },
     {
-      path: "/books/new",
-      name: "CreateBook",
-      component: () => import("@/views/NewBook.vue"),
+      path: "/contact",
+      name: "Contact",
+      component: () => import("@/views/ContactView.vue"),
       meta: {
-        title: "Create",
+        title: "Contact",
       },
     },
     {
-      path: "/books/delete/:id",
-      name: "DeleteBook",
-      component: () => import("@/views/DeleteBook.vue"),
+      path: "/login",
+      name: "Login",
+      component: () => import("@/views/LoginView.vue"),
       meta: {
-        title: "Delete",
+        title: "Login",
       },
     },
     {
-      path: "/books/detail/:id",
-      name: "DetailBook",
-      component: () => import("@/views/ShowBook.vue"),
+      path: "/register",
+      name: "register",
+      component: () => import("@/views/RegisterView.vue"),
       meta: {
-        title: "Detail",
+        title: "Register",
       },
     },
     {
@@ -52,6 +52,7 @@ const router = createRouter({
       },
     },
   ],
+  linkActiveClass:'active-link'
 });
 
 router.beforeEach((to, from, next) => {
