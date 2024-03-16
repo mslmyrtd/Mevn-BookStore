@@ -1,16 +1,16 @@
 <script setup>
-import { onMounted, ref } from "vue";
-import BackButton from "@/components/BackButton.vue";
-import Spinner from "@/components/Spinner.vue";
-import axios from "axios";
-import { useRouter, useRoute } from "vue-router";
+import { onMounted, ref } from 'vue';
+import BackButton from '@/components/BackButton.vue';
+import Spinner from '@/components/Spinner.vue';
+import axios from 'axios';
+import { useRouter, useRoute } from 'vue-router';
 
 const router = useRouter();
 const route = useRoute();
 
-const title = ref("");
-const author = ref("");
-const publishYear = ref("");
+const title = ref('');
+const author = ref('');
+const publishYear = ref('');
 const loading = ref(false);
 
 const userId = route.params.id;
@@ -34,14 +34,14 @@ const handleEditBook = async () => {
   const data = {
     title: title.value,
     author: author.value,
-    publishYear: publishYear.value,
+    publishYear: publishYear.value
   };
 
   loading.value = true;
 
   try {
     await axios.put(`http://localhost:5000/books/${userId}`, data);
-    router.push("/");
+    router.push('/');
   } catch (error) {
     console.error(error);
   } finally {

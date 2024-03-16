@@ -1,15 +1,15 @@
 <script setup>
-import Spinner from "../components/Spinner.vue";
-import axios from "axios";
-import { ref, onMounted } from "vue";
-import BooksTable from "../components/home/BooksTable.vue";
-import BooksCard from "../components/home/BooksCard.vue";
+import Spinner from '../components/Spinner.vue';
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
+import BooksTable from '../components/home/BooksTable.vue';
+import BooksCard from '../components/home/BooksCard.vue';
 const books = ref([]);
 const loading = ref(false);
-const showType = ref("table");
+const showType = ref('table');
 onMounted(() => {
   loading.value = true;
-  axios("http://localhost:5000/books")
+  axios('http://localhost:5000/books')
     .then((res) => {
       books.value = res.data.data;
       loading.value = false;
@@ -24,7 +24,7 @@ onMounted(() => {
       <button
         :class="{
           'font-bold bg-sky-300 hover:bg-sky-600 px-4 py-2 rounded-lg':
-            showType === 'table',
+            showType === 'table'
         }"
         @click="showType = 'table'"
       >
@@ -33,7 +33,7 @@ onMounted(() => {
       <button
         :class="{
           'font-bold bg-sky-300 hover:bg-sky-600 px-4 py-2 rounded-lg':
-            showType === 'card',
+            showType === 'card'
         }"
         @click="showType = 'card'"
       >

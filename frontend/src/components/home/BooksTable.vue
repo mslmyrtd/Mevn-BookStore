@@ -1,5 +1,5 @@
 <script setup>
-defineProps(["books"]);
+defineProps(['books']);
 </script>
 
 <template>

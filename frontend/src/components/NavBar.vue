@@ -1,5 +1,4 @@
 <script setup>
-
 import {
   Disclosure,
   DisclosureButton,
@@ -7,15 +6,15 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  MenuItems,
-} from "@headlessui/vue";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { PlusIcon } from "@heroicons/vue/20/solid";
+  MenuItems
+} from '@headlessui/vue';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline';
+import { PlusIcon } from '@heroicons/vue/20/solid';
 </script>
 
 <template>
   <Disclosure as="nav" class="bg-white shadow" v-slot="{ open }">
-            <!-- <RouterLink :to="'/books/detail/' + book._id"> İnfo </RouterLink> -->
+    <!-- <RouterLink :to="'/books/detail/' + book._id"> İnfo </RouterLink> -->
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 justify-between">
@@ -44,12 +43,34 @@ import { PlusIcon } from "@heroicons/vue/20/solid";
           </div>
           <div class="hidden md:ml-6 md:flex md:space-x-8">
             <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-            <RouterLink :to="'/'" class="inline-flex items-center  px-1 pt-1 text-sm font-medium text-gray-900"> Dashboard</RouterLink>
-            <RouterLink :to="'/books'" class="inline-flex items-center  px-1 pt-1 text-sm font-medium text-gray-900"> Books</RouterLink>
-            <RouterLink :to="'/contact'" class="inline-flex items-center  px-1 pt-1 text-sm font-medium text-gray-900"> Contact Us</RouterLink>
-            <RouterLink :to="'/login'" class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">Login</RouterLink>
-            <RouterLink :to="'/register'" class="inline-flex items-center  px-1 pt-1 text-sm font-medium text-gray-900">Register</RouterLink>
-           
+            <RouterLink
+              to="'/'"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900"
+            >
+              Dashboard</RouterLink
+            >
+            <RouterLink
+              to="'/books'"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900"
+            >
+              Books</RouterLink
+            >
+            <RouterLink
+              to="'/contact'"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900"
+            >
+              Contact Us</RouterLink
+            >
+            <RouterLink
+              to="'/login'"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900"
+              >Login</RouterLink
+            >
+            <RouterLink
+              to="'/register'"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900"
+              >Register</RouterLink
+            >
           </div>
         </div>
         <div class="flex items-center">
@@ -103,7 +124,7 @@ import { PlusIcon } from "@heroicons/vue/20/solid";
                       href="#"
                       :class="[
                         active ? 'bg-gray-100' : '',
-                        'block px-4 py-2 text-sm text-gray-700',
+                        'block px-4 py-2 text-sm text-gray-700'
                       ]"
                       >Your Profile</a
                     >
@@ -113,7 +134,7 @@ import { PlusIcon } from "@heroicons/vue/20/solid";
                       href="#"
                       :class="[
                         active ? 'bg-gray-100' : '',
-                        'block px-4 py-2 text-sm text-gray-700',
+                        'block px-4 py-2 text-sm text-gray-700'
                       ]"
                       >Settings</a
                     >
@@ -123,7 +144,7 @@ import { PlusIcon } from "@heroicons/vue/20/solid";
                       href="#"
                       :class="[
                         active ? 'bg-gray-100' : '',
-                        'block px-4 py-2 text-sm text-gray-700',
+                        'block px-4 py-2 text-sm text-gray-700'
                       ]"
                       >Sign out</a
                     >
@@ -211,10 +232,7 @@ import { PlusIcon } from "@heroicons/vue/20/solid";
   </Disclosure>
 </template>
 <style scoped>
-.active-link{
-@apply border-b-2 border-indigo-500
+.active-link {
+  @apply border-b-2 border-indigo-500;
 }
-
 </style>
-
-

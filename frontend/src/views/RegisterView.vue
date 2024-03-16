@@ -1,14 +1,7 @@
 <template>
-    <div>
-Register
-
-    </div>
+  <div>Register</div>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style  scoped>
-
-</style>
+<style scoped></style>

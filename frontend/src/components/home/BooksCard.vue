@@ -1,9 +1,9 @@
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
-import { RouterLink } from "vue-router";
+import { RouterLink } from 'vue-router';
 
-defineProps(["books"]);
+defineProps(['books']);
 </script>
 <template>
   <div

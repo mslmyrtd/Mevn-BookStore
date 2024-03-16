@@ -1,28 +1,28 @@
 <script setup>
-import { ref } from "vue";
-import BackButton from "@/components/BackButton.vue";
-import Spinner from "@/components/Spinner.vue";
-import axios from "axios";
-import { useRouter } from "vue-router";
+import { ref } from 'vue';
+import BackButton from '@/components/BackButton.vue';
+import Spinner from '@/components/Spinner.vue';
+import axios from 'axios';
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const title = ref("");
-const author = ref("");
-const publishYear = ref("");
+const title = ref('');
+const author = ref('');
+const publishYear = ref('');
 const loading = ref(false);
 
 const handleSaveBook = async () => {
   const data = {
     title: title.value,
     author: author.value,
-    publishYear: publishYear.value,
+    publishYear: publishYear.value
   };
 
   loading.value = true;
 
   try {
-    await axios.post("http://localhost:5000/books", data);
-    router.push("/");
+    await axios.post('http://localhost:5000/books', data);
+    router.push('/');
   } catch (error) {
     console.error(error);
   } finally {

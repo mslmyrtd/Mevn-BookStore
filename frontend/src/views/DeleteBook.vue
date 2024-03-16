@@ -1,9 +1,9 @@
 <script setup>
-import { ref } from "vue";
-import axios from "axios";
-import { useRouter, useRoute } from "vue-router";
-import BackButton from "@/components/BackButton.vue";
-import Spinner from "@/components/Spinner.vue";
+import { ref } from 'vue';
+import axios from 'axios';
+import { useRouter, useRoute } from 'vue-router';
+import BackButton from '@/components/BackButton.vue';
+import Spinner from '@/components/Spinner.vue';
 const router = useRouter();
 const route = useRoute();
 const loading = ref(false);
@@ -13,13 +13,13 @@ const handleDeleteBook = async () => {
   try {
     await axios.delete(`http://localhost:5000/books/${route.params.id}`);
     loading.value = false;
-    router.push("/");
+    router.push('/');
   } catch (error) {
     loading.value = false;
     console.log(error);
   }
 };
-const handleCancel = () => router.push("/");
+const handleCancel = () => router.push('/');
 </script>
 <template>
   <div class="p-4">

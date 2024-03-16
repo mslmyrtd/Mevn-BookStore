@@ -1,61 +1,61 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Dashboard from "@/views/Dashboard.vue";
+import { createRouter, createWebHistory } from 'vue-router';
+import Dashboard from '@/views/Dashboard.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "",
-      name: "home",
+      path: '',
+      name: 'home',
       component: Dashboard,
       meta: {
-        title: "Home",
-      },
+        title: 'Home'
+      }
     },
     {
-      path: "/books",
-      name: "Books",
-      component: () => import("@/views/BooksView.vue"),
+      path: '/books',
+      name: 'Books',
+      component: () => import('@/views/BooksView.vue'),
       meta: {
-        title: "BooksPage",
-      },
+        title: 'BooksPage'
+      }
     },
     {
-      path: "/contact",
-      name: "Contact",
-      component: () => import("@/views/ContactView.vue"),
+      path: '/contact',
+      name: 'Contact',
+      component: () => import('@/views/ContactView.vue'),
       meta: {
-        title: "Contact",
-      },
+        title: 'Contact'
+      }
     },
     {
-      path: "/login",
-      name: "Login",
-      component: () => import("@/views/LoginView.vue"),
+      path: '/login',
+      name: 'Login',
+      component: () => import('@/views/LoginView.vue'),
       meta: {
-        title: "Login",
-      },
+        title: 'Login'
+      }
     },
     {
-      path: "/register",
-      name: "register",
-      component: () => import("@/views/RegisterView.vue"),
+      path: '/register',
+      name: 'register',
+      component: () => import('@/views/RegisterView.vue'),
       meta: {
-        title: "Register",
-      },
+        title: 'Register'
+      }
     },
     {
-      path: "/:pathMatch(.*)*",
-      name: "PageNotFound",
-      component: () => import("@/views/PageNotFound.vue"),
+      path: '/:pathMatch(.*)*',
+      name: 'PageNotFound',
+      component: () => import('@/views/PageNotFound.vue'),
       meta: {
-        title: "NotFound",
-      },
-    },
+        title: 'NotFound'
+      }
+    }
   ],
-  linkActiveClass:'active-link'
+  linkActiveClass: 'active-link'
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   document.title = `${to.meta.title}`;
   next();
 });
