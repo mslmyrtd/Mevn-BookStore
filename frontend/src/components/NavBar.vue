@@ -13,7 +13,11 @@ import { PlusIcon } from '@heroicons/vue/20/solid';
 </script>
 
 <template>
-  <Disclosure as="nav" class="bg-white shadow" v-slot="{ open }">
+  <Disclosure
+    as="nav"
+    class="bg-white shadow sticky top-0 z-10"
+    v-slot="{ open }"
+  >
     <!-- <RouterLink :to="'/books/detail/' + book._id"> İnfo </RouterLink> -->
 
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

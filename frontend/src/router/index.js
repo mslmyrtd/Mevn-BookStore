@@ -20,6 +20,14 @@ const router = createRouter({
       }
     },
     {
+      path: '/books/:id',
+      name: 'book-detail',
+      component: () => import('@/views/BookDetailView.vue'),
+      meta: {
+        title: 'book-detail'
+      }
+    },
+    {
       path: '/contact',
       name: 'Contact',
       component: () => import('@/views/ContactView.vue'),
