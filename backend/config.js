@@ -1,3 +1,16 @@
-export const PORT = 5000;
-export const mongoDBURL =
-  "mongodb+srv://root:2544955_@cluster0.miu0lub.mongodb.net/?retryWrites=true&w=majority";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URL);
+    console.log("hello");
+  } catch (error) {
+    consoel.log(error.message, "sdfsdl");
+    throw error;
+  }
+};
+
+export default connectDB;
